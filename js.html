@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Cheat Sheet - Clean & Simple</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            padding: 20px;
+            font-size: 11px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 20px 0 10px 0;
+            color: #000;
+            background: #f0f0f0;
+            padding: 5px 10px;
+        }
+
+        h3 {
+            font-size: 12px;
+            margin: 15px 0 5px 0;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .code {
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            margin: 5px 0;
+            white-space: pre-wrap;
+        }
+
+        .inline {
+            background: #f0f0f0;
+            padding: 1px 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        @media print {
+            body { font-size: 9px; }
+            .code { font-size: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">🌙</button>
+    <div class="container">
+        <a style="color: red; font-size: 1rem;" href="./index.html">Back To Home!!!</a>
+        <h1>JavaScript Cheat Sheet</h1>
+
+        <div class="section">
+            <h2>Variables</h2>
+            <div class="code">
+let name = "John";
+const age = 30;
+var isStudent = true;
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Data Types</h2>
+                <div class="code">
+String, Number, Boolean,
+Undefined, Null, Object,
+Array, Symbol (ES6), BigInt
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Operators</h2>
+                <div class="code">
++ - * / % **  
+= == === != !==  
+> < >= <=  
+&& || !  
+++ --  
+?: (Ternary)
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Functions</h2>
+                <div class="code">
+function greet(name) {
+  return "Hello " + name;
+}
+
+const greetArrow = (name) => `Hi ${name}`;
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Conditionals</h2>
+                <div class="code">
+if (age > 18) {
+  console.log("Adult");
+} else {
+  console.log("Minor");
+}
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Loops</h2>
+                <div class="code">
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+while (i < 5) {
+  i++;
+}
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Arrays</h2>
+                <div class="code">
+const fruits = ["apple", "banana"];
+fruits.push("orange");
+console.log(fruits[1]);
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Objects</h2>
+                <div class="code">
+const person = {
+  name: "John",
+  age: 25
+};
+console.log(person.name);
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>DOM Basics</h2>
+                <div class="code">
+document.getElementById("demo");
+document.querySelector(".class");
+element.textContent = "Hello";
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Events</h2>
+                <div class="code">
+button.addEventListener("click", function() {
+  alert("Clicked!");
+});
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>ES6 Features</h2>
+                <div class="code">
+let [a, b] = [1, 2];
+const { name, age } = person;
+const nums = [1, 2, 3];
+const newNums = [...nums];
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Useful Methods</h2>
+            <div class="code">
+str.length, str.toUpperCase(), str.includes("x")  
+arr.map(), arr.filter(), arr.reduce()  
+obj.hasOwnProperty("key")
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Timers</h2>
+            <div class="code">
+setTimeout(() => {
+  console.log("Delayed");
+}, 1000);
+
+setInterval(() => {
+  console.log("Repeats");
+}, 1000);
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Console</h2>
+            <div class="code">
+console.log(), console.error(), console.warn(), console.table()
+            </div>
+        </div>
+
+        <!-- New features start here -->
+
+        <div class="grid">
+            <div class="section">
+                <h2>Promises & Async/Await</h2>
+                <div class="code">
+const p = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done"), 1000);
+});
+
+p.then(result => console.log(result))
+ .catch(err => console.error(err));
+
+async function asyncFunc() {
+  try {
+    const res = await p;
+    console.log(res);
+  } catch (e) {
+    console.error(e);
+  }
+}
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Classes</h2>
+                <div class="code">
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    return `Hi, I'm ${this.name}`;
+  }
+}
+
+const p = new Person("Alice", 28);
+console.log(p.greet());
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Modules (ES6)</h2>
+                <div class="code">
+// export.js
+export const pi = 3.14;
+export function square(x) { return x * x; }
+
+// import.js
+import { pi, square } from './export.js';
+console.log(square(pi));
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Template Literals</h2>
+                <div class="code">
+const name = "John";
+const greeting = `Hello, ${name}!  
+How are you today?`;
+console.log(greeting);
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Destructuring with Defaults</h2>
+                <div class="code">
+const {name = "Guest", age = 30} = {};
+console.log(name, age);  // Guest 30
+
+const [x = 1, y = 2] = [undefined, 10];
+console.log(x, y);  // 1 10
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Spread & Rest Operators</h2>
+                <div class="code">
+// Spread in arrays
+const arr1 = [1, 2];
+const arr2 = [...arr1, 3, 4];
+
+// Rest in function args
+function sum(...nums) {
+  return nums.reduce((a,b) => a+b, 0);
+}
+console.log(sum(1,2,3));
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Error Handling</h2>
+                <div class="code">
+try {
+  throw new Error("Oops!");
+} catch (e) {
+  console.error(e.message);
+} finally {
+  console.log("Always runs");
+}
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Map & Set</h2>
+                <div class="code">
+const map = new Map();
+map.set("a", 1);
+console.log(map.get("a"));
+
+const set = new Set([1,2,2,3]);
+console.log(set.size);  // 3
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>JSON Methods</h2>
+            <div class="code">
+const obj = {name: "John", age: 25};
+const str = JSON.stringify(obj);
+const newObj = JSON.parse(str);
+console.log(newObj.name);
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fetch API (Basic)</h2>
+            <div class="code">
+fetch('https://api.example.com/data')
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+            </div>
+        </div>
+
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
