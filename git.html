@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Git & GitHub Cheat Sheet - Clean & Simple</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+    * {
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.4;
+        padding: 20px;
+        font-size: 11px;
+        color: #333;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #333;
+    }
+    h2 {
+        font-size: 16px;
+        margin: 20px 0 10px 0;
+        color: #000;
+        background: #f0f0f0;
+        padding: 5px 10px;
+    }
+    h3 {
+        font-size: 12px;
+        margin: 15px 0 5px 0;
+        font-weight: bold;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    .code {
+        background: #f8f8f8;
+        border: 1px solid #ddd;
+        padding: 8px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        margin: 5px 0;
+        white-space: pre-wrap;
+    }
+    .inline {
+        background: #f0f0f0;
+        padding: 1px 3px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+        font-size: 10px;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 4px;
+        text-align: left;
+    }
+    th {
+        background: #f0f0f0;
+    }
+    .section {
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+    }
+    @media print {
+        body { font-size: 9px; }
+        .code { font-size: 8px; }
+        table { font-size: 8px; }
+    }
+</style>
+</head>
+<body>
+         <button style="text-align: center;" id="theme-toggle">🌙</button>
+    <div class="container">
+       <a href="./index.html" 
+   style="
+     display: inline-block;
+     background-color: #ff4d4d; 
+     color: white; 
+     padding: 8px 15px; 
+     text-decoration: none; 
+     font-size: 12px; 
+     border-radius: 4px; 
+     border: 1px solid #cc0000;
+     font-weight: bold;
+     transition: background-color 0.3s ease;
+   "
+   onmouseover="this.style.backgroundColor='#cc0000'" 
+   onmouseout="this.style.backgroundColor='#ff4d4d'">
+   ← Back To Home
+</a>
+
+        <h1>Git &amp; GitHub Cheat Sheet</h1>
+        
+        <div class="section">
+            <h2>Basic Git Commands</h2>
+            <table>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><span class="inline">git init</span></td>
+                    <td>Initialize a new Git repository</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git clone &lt;url&gt;</span></td>
+                    <td>Clone a remote repository locally</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git status</span></td>
+                    <td>Show current status of working directory</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git add &lt;file&gt;</span></td>
+                    <td>Add files to staging area</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git commit -m "message"</span></td>
+                    <td>Commit staged changes with a message</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git push origin main</span></td>
+                    <td>Push commits to remote branch</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git pull</span></td>
+                    <td>Fetch and merge changes from remote</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git branch</span></td>
+                    <td>List all branches</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git checkout &lt;branch&gt;</span></td>
+                    <td>Switch to a branch</td>
+                </tr>
+                <tr>
+                    <td><span class="inline">git merge &lt;branch&gt;</span></td>
+                    <td>Merge branch into current branch</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>GitHub Workflow</h2>
+            <div class="code">
+# Clone repo
+git clone https://github.com/username/repo.git
+
+# Create a new branch
+git checkout -b feature-branch
+
+# Stage and commit changes
+git add .
+git commit -m "Add feature"
+
+# Push branch to GitHub
+git push origin feature-branch
+
+# Open Pull Request on GitHub website
+
+# Merge Pull Request after review
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="section">
+                <h2>Configuration & Info</h2>
+                <table>
+                    <tr>
+                        <th>Command</th>
+                        <th>Purpose</th>
+                    </tr>
+                    <tr>
+                        <td><span class="inline">git config --global user.name "Name"</span></td>
+                        <td>Set Git username</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline">git config --global user.email "email@example.com"</span></td>
+                        <td>Set Git email</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline">git log</span></td>
+                        <td>Show commit history</td>
+                    </tr>
+                    <tr>
+                        <td><span class="inline">git diff</span></td>
+                        <td>Show unstaged changes</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>GitHub Useful Links</h2>
+                <div class="code">
+# Create repo on GitHub web
+
+# Clone locally with HTTPS or SSH
+
+# Push commits and open Pull Requests
+
+# Review, comment, merge PRs on GitHub
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        <script src="/script.js"></script>
+</body>
+</html>
